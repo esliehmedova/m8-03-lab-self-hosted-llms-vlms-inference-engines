@@ -34,6 +34,13 @@ def main() -> None:
         ],
     )
     print(response.choices[0].message.content)
+    print("\n--- Reflection ---")
+    print(
+        "This is the same shape as a hosted API call because both use HTTP requests "
+        "with a model name + messages format. The only difference is the base_url: "
+        "locally it points to localhost, while hosted APIs point to a cloud server. "
+        "So the client code stays identical; only the server changes."
+    )
 
     # TODO (reflection): in a comment or a print, explain in your own words
     # why this is "the same shape" as yesterday's hosted Gemini call.
